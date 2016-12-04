@@ -9,7 +9,9 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
+  Rails.application.routes.default_url_options[:host] = 'http://127.0.0.1:3000'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = {:host => 'https://pure-mesa-98198.herokuapp.com', :protocol => 'https'}
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
