@@ -6,6 +6,7 @@ gem 'rails', '4.1.16'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+gem 'stripe'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
