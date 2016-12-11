@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :images
+  #먼저 사용자 정의  registration_controller에 접근하고 그 다음 devise controller에 접근한다.
+  devise_for :users, :controller => {:registrations => 'registrations'}
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
